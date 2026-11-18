@@ -1,0 +1,62 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>html,body{margin:0;background:transparent}canvas{display:block}</style></head>
+<body><canvas id="c" width="1080" height="1920"></canvas>
+<script>
+// Subtítulos Saúl Pro (copiado de estilo-cine/cine.js: EST, layout, dibujaGrupo) sin zoom del texto.
+const W = 1080, H = 1920, FONT = '"Helvetica Neue", Helvetica, Arial, sans-serif';
+const ZS = { arriba: 270, abajo: 1530, derecha: 890, lado: 50 };
+const EST = { chico: { peso: 500, tam: 64, esp: -2 }, grande: { peso: 700, tam: 178, esp: -8 } };
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x)), eOut = k => 1 - Math.pow(1 - k, 3);
+const g = document.getElementById('c').getContext('2d');
+let P = [];
+function layout() {
+  for (const gp of P) {
+    const LIM = 880; let y = 0, maxw = 0;
+    for (const ln of gp.lineas) {
+      const st = EST[ln.estilo]; let tam = st.tam;
+      const mide = sz => { g.font = `${st.peso} ${sz}px ${FONT}`; g.letterSpacing = `${st.esp * sz / st.tam}px`; return g.measureText(ln.palabras.map(p => p.txt).join(' ')).width; };
+      let w = mide(tam); if (w > LIM) { tam *= LIM / w; w = mide(tam); }
+      ln.tam = tam; ln.w = w; maxw = Math.max(maxw, w);
+      y += tam * (ln.estilo === 'chico' ? 1.0 : .9); ln.base = y; y += tam * .1;
+      let x = 0; g.font = `${st.peso} ${tam}px ${FONT}`; g.letterSpacing = `${st.esp * tam / st.tam}px`;
+      const sp = g.measureText(' ').width;
+      for (const p of ln.palabras) { p.x = x; p.w = g.measureText(p.txt).width; x += p.w + sp; }
+    }
+    gp.alto = y; gp.ancho = maxw;
+  }
+  g.letterSpacing = '0px';
+}
+function dibuja(gp, t) {
+  if (t < gp.ini - .1 || t > gp.fin + .02) return;
+  const salida = clamp((t - (gp.fin - .16)) / .16), claro = gp.tema === 'claro';
+  const cx = W / 2, ox = Math.max(ZS.lado + 10, cx - gp.ancho / 2);
+  const oy = clamp(H * gp.y - gp.alto / 2, ZS.arriba, ZS.abajo - gp.alto) - salida * 50;
+  const color = claro ? '#262626' : '#f2f2f2';
+  for (const ln of gp.lineas) {
+    const st = EST[ln.estilo];
+    g.font = `${st.peso} ${ln.tam}px ${FONT}`; g.letterSpacing = `${st.esp * ln.tam / st.tam}px`; g.textBaseline = 'alphabetic';
+    // cada línea va centrada
+    const lx = cx - ln.w / 2;
+    for (const p of ln.palabras) {
+      const k = eOut(clamp((t - (p.a - .07)) / .22)); if (k <= 0) continue;
+      const a = k * (1 - salida), blur = (1 - k) * 16 + salida * 22 + (ln.estilo === 'chico' ? .4 : 0);
+      const x = lx + p.x, y = oy + ln.base + (1 - k) * 42;
+      g.save();
+      for (let r = 3; r >= 0; r--) {   // estela de movimiento
+        if (r > 0 && k > .97) continue;
+        g.globalAlpha = a * (r === 0 ? 1 : .18 * (1 - k));
+        g.filter = `blur(${(blur + r * 3).toFixed(1)}px)`;
+        g.fillStyle = color;
+        // halo para que se lea sobre el video: claro detrás del texto oscuro, oscuro detrás del blanco
+        g.shadowColor = claro ? 'rgba(240,236,228,.9)' : 'rgba(0,0,0,.8)'; g.shadowBlur = 30;
+        g.fillText(p.txt, x, y + r * 10);
+      }
+      g.restore();
+    }
+  }
+  g.letterSpacing = '0px';
+}
+window.__render = t => { g.clearRect(0, 0, W, H); for (const gp of P) dibuja(gp, t); };
+window.__cargar = j => { P = j.paginas; layout(); window.__ready = true; };
+</script></body></html>

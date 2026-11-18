@@ -1,0 +1,16 @@
+.venv/
+node_modules/
+bin/
+editor-vsl/editor/bin/
+audio/sfx/
+referencias/
+proyectos/*/cuadros/
+proyectos/*/mascaras/
+proyectos/*/salida/
+proyectos/*/fotos/
+proyectos/*/voz.wav
+*.parcial.mp4
+.DS_Store
+__pycache__/
+estilos/testimonios/demo/material/
+estilos/testimonios/demo/salida/

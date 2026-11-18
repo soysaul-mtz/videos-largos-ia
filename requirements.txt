@@ -1,0 +1,6 @@
+# Python 3.12+ en Mac con chip Apple (mlx-whisper usa el chip de Apple)
+mlx-whisper>=0.4
+numpy>=2.0
+opencv-python-headless>=4.10,<5
+scipy>=1.13
+pillow>=10

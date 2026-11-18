@@ -1,0 +1,9 @@
+/* Estilo de ejemplo: cópialo para crear uno nuevo (estilos/<tu-estilo>/). */
+@font-face { font-family: "Poppins"; font-weight: 600; src: url(/fonts/Poppins-SemiBold.ttf); }
+@font-face { font-family: "Poppins"; font-weight: 800; src: url(/fonts/Poppins-ExtraBold.ttf); }
+.fondo { background: radial-gradient(1200px 700px at 30% 20%, #23305a, #0b1020 70%); }
+.vid.ventana { box-shadow: 0 0 0 4px #fff, 0 30px 80px rgba(0,0,0,.5); }
+.p-titulo { display: flex; align-items: center; justify-content: center; font: 800 120px Poppins; color: #fff; }
+.subs { display: flex; align-items: flex-end; justify-content: center; padding-bottom: 90px; font: 600 54px Poppins; color: #fff; text-shadow: 0 4px 18px rgba(0,0,0,.7); }
+.subs b { color: #ffd23f; font-weight: 800; }
+.encima .barra { position: absolute; left: 0; bottom: 0; height: 8px; background: #ffd23f; }

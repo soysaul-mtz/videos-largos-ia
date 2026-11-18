@@ -1,0 +1,19 @@
+De dónde salió cada tipografía de esta carpeta (todas son libres)
+
+== Estilo «neón» ==
+
+InterTight-Variable.ttf          Inter Tight, pesos 100 a 900 (variable). Licencia SIL Open Font License 1.1.
+                                 https://github.com/google/fonts/blob/main/ofl/intertight/InterTight%5Bwght%5D.ttf
+InterTight-Italic-Variable.ttf   Inter Tight cursiva, pesos 100 a 900 (variable). Licencia SIL Open Font License 1.1.
+                                 https://github.com/google/fonts/blob/main/ofl/intertight/InterTight-Italic%5Bwght%5D.ttf
+OFL-InterTight.txt               Texto de la licencia de Inter Tight.
+                                 https://github.com/google/fonts/blob/main/ofl/intertight/OFL.txt
+Anton-Regular.ttf                Anton, peso 400. Licencia SIL Open Font License 1.1.
+                                 https://github.com/google/fonts/blob/main/ofl/anton/Anton-Regular.ttf
+OFL-Anton.txt                    Texto de la licencia de Anton.
+                                 https://github.com/google/fonts/blob/main/ofl/anton/OFL.txt
+
+Bajadas el 18 de noviembre de 2026 del repositorio oficial de Google Fonts (github.com/google/fonts, rama main).
+Las usa el estilo «neón» (estilos/neon/estilo.css): Inter Tight en cifras, etiquetas, rótulos y botones; Anton en el título del logo.
+
+Las demás tipografías de esta carpeta (Poppins y las que agreguen otros estilos) no son del estilo «neón»: este estilo no las usa ni las tocó.
