@@ -9,6 +9,12 @@ en una línea.
 1. Si es la primera vez en esta computadora, sigue `INSTALAR.md`.
 2. Lee `config/marca.json` (nombre, colores, tipografía, logo, carpeta de música). Si no existe, pregunta esos datos y créalo.
 3. Mira el video: duración, tamaño, si es una persona a cámara, una clase con pantalla o varios testimonios.
+4. **Referencia visual (opcional, mejora el parecido):** si la persona tiene el paquete «Referencias visuales - plantillas
+   largas.zip», descomprímelo encima del sistema (`unzip -o -q "<zip>" -d .`). Deja en `plantillas/<id>/referencia/` las
+   imágenes del video del que salió cada plantilla (`hojas/` un cuadro por segundo, `fotos/` cada animación en grande).
+   Cuando exista esa carpeta, antes de dar por buenas las fotos del storyboard compáralas contra la foto de la misma
+   pieza en la referencia (colores, tamaños, posición, brillo) y corrige lo que se aleje. Se compara el look; nunca se
+   usan esas imágenes, logos ni textos dentro del video.
 
 ## Qué plantilla o motor usar
 
