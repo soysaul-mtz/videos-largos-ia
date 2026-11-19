@@ -46,4 +46,4 @@ for h in caras sdr fotogramas; do swiftc -O $T/$h.swift -o $T/bin/$h 2>/dev/null
 .venv/bin/python audio/efectos_basicos.py >/dev/null && ok "audio/sfx (efectos básicos libres de derechos)"
 mkdir -p $T/sfx; [[ -f $T/sfx/whoosh.wav ]] || ffmpeg -v error -y -i audio/sfx/whoosh_rapido.mp3 $T/sfx/whoosh.wav || true
 
-print -P "\n%F{green}Listo.%f Sigue con: ./verificar.sh   y después scripts/bajar_estilos.sh (los 3 videos de referencia)."
+print -P "\n%F{green}Listo.%f Sigue con: ./verificar.sh   y abre la interfaz: ./abrir.sh"

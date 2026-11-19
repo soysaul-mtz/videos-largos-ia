@@ -12,5 +12,8 @@ proyectos/*/voz.wav
 *.parcial.mp4
 .DS_Store
 __pycache__/
-estilos/testimonios/demo/material/
-estilos/testimonios/demo/salida/
+plantillas/testimonios/demo/material/
+plantillas/testimonios/demo/salida/
+plantillas/*/referencia/
+pedidos/
+entrada/

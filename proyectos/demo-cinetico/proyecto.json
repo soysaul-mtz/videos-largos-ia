@@ -1,1 +1,15 @@
-{ "nombre": "demo-cinetico", "estilo": "cinetico", "fuente": null, "dur": 40, "fps": 30, "foco": [0.5, 0.37], "cara": [0.16, 0.34] }
+{
+ "nombre": "demo-cinetico",
+ "plantilla": "cinetico",
+ "fuente": null,
+ "dur": 40,
+ "fps": 30,
+ "foco": [
+  0.5,
+  0.37
+ ],
+ "cara": [
+  0.16,
+  0.34
+ ]
+}

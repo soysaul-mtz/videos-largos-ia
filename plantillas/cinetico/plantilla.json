@@ -1,0 +1,55 @@
+{
+  "numero": 2,
+  "id": "cinetico",
+  "nombre": "Cinético",
+  "titulo": "Plantilla larga 2 · Cinético",
+  "resumen": "Video de venta horizontal de una persona a cámara, con palabras gigantes que pasan detrás de su cabeza, frases al pecho, insertos sobre negro y una barra roja de avance.",
+  "sirve_para": [
+    "Video de venta de un experto a cámara, sin plataforma que enseñar",
+    "Presentar un método o sistema en pasos",
+    "Invitar a un evento, clase gratuita o llamada",
+    "Video de marca personal con mucho énfasis en las palabras"
+  ],
+  "no_sirve_para": [
+    "Enseñar una plataforma por dentro con grabación de pantalla: usa la plantilla Neón",
+    "Compilado de testimonios de clientes: usa la plantilla Testimonios",
+    "Videos grabados con fondo recargado o con la persona moviéndose: el texto detrás no se lee"
+  ],
+  "duracion_ideal": "de 5 a 10 minutos",
+  "tiempo_de_edicion": "3 a 4 horas por cada 3 minutos de video, con el material completo (estimado)",
+  "material": [
+    "1 video a cámara, horizontal, sobre fondo liso, grabado con el guion-molde",
+    "Nombre de la persona y de 2 a 4 credenciales cortas",
+    "1 logo del programa con fondo transparente",
+    "25 a 30 tomas de apoyo distintas por cada 3 minutos (salen de 4 a 6 videos de eventos, oficina o clientes)",
+    "8 o más fotos de clientes o eventos, y 3 más para las fotos apiladas",
+    "1 a 2 capturas o grabaciones de pantalla",
+    "3 cifras reales: la de la promesa, a cuántos ha ayudado y en cuántos lugares",
+    "Los 3 pasos del sistema, con nombre de 1 a 3 palabras",
+    "1 caso de éxito con nombre, foto o video y resultado",
+    "El llamado a la acción exacto y 1 canción con licencia"
+  ],
+  "secciones": [
+    { "nombre": "Gancho y promesa", "porcentaje": 4, "que_pasa": "Promesa con cifra: reloj detrás, cortina con título, multitud y remate en escalera." },
+    { "nombre": "Presentación y autoridad", "porcentaje": 7, "que_pasa": "Nombre de la persona, credenciales en rótulos amarillos sobre tomas de apoyo y fotos de clientes." },
+    { "nombre": "Dolor y creencia falsa", "porcentaje": 12, "que_pasa": "Negación en letras separadas, lista de dolores a un lado de la cara y sello NO." },
+    { "nombre": "Giro y solución", "porcentaje": 15, "que_pasa": "Palabras gigantes encadenadas, el logo del programa, el signo igual y una captura." },
+    { "nombre": "El sistema en 3 pasos", "porcentaje": 23, "que_pasa": "Cada paso con su nombre a un lado de la cara, una toma de apoyo y un inserto con íconos o figuras." },
+    { "nombre": "Propósito", "porcentaje": 12, "que_pasa": "Más persona a cámara, con frases al pecho y una ráfaga de tomas de apoyo." },
+    { "nombre": "Caso de éxito", "porcentaje": 7, "que_pasa": "Tomas del cliente con su nombre, la captura de su resultado y una pared de fotos." },
+    { "nombre": "Qué es y qué no es", "porcentaje": 8, "que_pasa": "Frases tachadas, lo que incluye en lista y la marca de agua del logo detrás." },
+    { "nombre": "Llamado a la acción", "porcentaje": 12, "que_pasa": "Logo, llamado amarillo con flechas verdes y cierre mirando a cámara." }
+  ],
+  "piezas_destacadas": [
+    { "pieza": "gigante", "que_es": "Palabra gigante que pasa por detrás de la cabeza de la persona." },
+    { "pieza": "frase", "que_es": "Frase que entra enorme y se achica hasta quedar al pecho." },
+    { "pieza": "separadas", "que_es": "Una palabra de negación en letras rojas separadas, a la altura de los ojos y detrás." },
+    { "pieza": "cortina", "que_es": "Cortina negra arriba con el título, con la persona debajo." },
+    { "pieza": "figuras", "que_es": "Personas dibujadas que aparecen una por una, en multitud o junto a la persona." },
+    { "pieza": "escalera", "que_es": "Título itálico en tres golpes, cada uno más grande que el anterior." },
+    { "pieza": "carrusel", "que_es": "Tarjetas de fotos en 3D con texto inclinado encima." },
+    { "pieza": "cta", "que_es": "Llamado amarillo en dos renglones con flechas verdes que caen." }
+  ],
+  "como_pedirla": "Edita este video con la plantilla Cinético: /ruta/a/mi-video.mp4",
+  "muestra": { "proyecto": "proyectos/demo-cinetico", "tiempos": [2.9, 4.9, 10.0, 15.8, 35.0, 38.5], "tramo": [0, 11.9] }
+}

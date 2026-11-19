@@ -1,6 +1,6 @@
 // Núcleo del motor de videos largos. TODO es función del tiempo absoluto t (nada acumulado):
 // así cualquier cuadro o cualquier rango se puede volver a renderizar y sale idéntico.
-// Un ESTILO (estilos/<nombre>/estilo.js) aporta: fondo, piezas, subtítulos y capa de encima.
+// Un ESTILO (plantillas/<nombre>/estilo.js) aporta: fondo, piezas, subtítulos y capa de encima.
 // Un PROYECTO (proyectos/<nombre>/beats.js) dice qué pieza va en cada momento y cómo se ve la persona.
 
 export const W = 1920, H = 1080;

@@ -14,6 +14,6 @@ OFL-Anton.txt                    Texto de la licencia de Anton.
                                  https://github.com/google/fonts/blob/main/ofl/anton/OFL.txt
 
 Bajadas el 18 de noviembre de 2026 del repositorio oficial de Google Fonts (github.com/google/fonts, rama main).
-Las usa el estilo «neón» (estilos/neon/estilo.css): Inter Tight en cifras, etiquetas, rótulos y botones; Anton en el título del logo.
+Las usa el estilo «neón» (plantillas/neon/estilo.css): Inter Tight en cifras, etiquetas, rótulos y botones; Anton en el título del logo.
 
 Las demás tipografías de esta carpeta (Poppins y las que agreguen otros estilos) no son del estilo «neón»: este estilo no las usa ni las tocó.

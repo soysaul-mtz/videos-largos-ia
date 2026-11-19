@@ -1,5 +1,5 @@
 // Demo del estilo «neón»: enseña TODAS las piezas con contenido inventado («Cómo vender cursos por internet»).
-// Sirve de machote: copia el beat de la pieza que necesites y cámbiale los datos. La guía completa está en estilos/neon/ESTILO.md.
+// Sirve de machote: copia el beat de la pieza que necesites y cámbiale los datos. La guía completa está en plantillas/neon/ESTILO.md.
 // En este estilo todos los cambios de encuadre son corte seco; solo el vuelo a la ventana lleva `tr`.
 const mini = n => `img/mini${n}.svg`, reel = n => `img/reel${n}.svg`;
 

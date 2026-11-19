@@ -1,0 +1,15 @@
+{
+ "nombre": "CAMBIA: nombre del video",
+ "plantilla": "cinetico",
+ "fuente": null,
+ "dur": 180,
+ "fps": 30,
+ "foco": [
+  0.5,
+  0.37
+ ],
+ "cara": [
+  0.16,
+  0.34
+ ]
+}

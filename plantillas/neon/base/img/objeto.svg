@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 380" width="520" height="380" ><defs><linearGradient id="t" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3b566b"/><stop offset=".5" stop-color="#22394b"/><stop offset="1" stop-color="#1b6a80"/></linearGradient>
+<linearGradient id="c" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5fe0ff"/><stop offset="1" stop-color="#1687f0"/></linearGradient></defs>
+<g transform="rotate(-4 260 200)"><rect x="30" y="80" width="450" height="270" rx="22" fill="url(#t)"/><path d="M300 80 Q380 220 480 250 L480 102 Q480 80 458 80 Z" fill="#2a8097" opacity=".5"/>
+<rect x="78" y="150" width="62" height="48" rx="9" fill="#f1ede4"/><text x="78" y="262" font-family="Courier New, monospace" font-size="34" font-weight="700" fill="#e9eef2" letter-spacing="4">0000 1234 5678</text>
+<text x="78" y="312" font-family="Courier New, monospace" font-size="22" fill="#cfd8de" letter-spacing="3">TU NOMBRE  12/30</text></g>
+<g transform="rotate(4 250 70)"><rect x="196" y="12" width="112" height="112" rx="16" fill="#0d5fb0"/><rect x="190" y="4" width="112" height="112" rx="16" fill="url(#c)"/><text x="246" y="88" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="84" font-weight="900" fill="#fff" text-anchor="middle">$</text></g></svg>

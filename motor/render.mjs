@@ -16,8 +16,9 @@ const args = process.argv.slice(2), opt = k => { const i = args.indexOf(k); retu
 if (!args[0] || args[0].startsWith('--')) { console.error('Uso: node motor/render.mjs proyectos/<nombre> [--fotos t1,t2] [--desde a --hasta b]'); process.exit(1); }
 const PROY = path.resolve(args[0]);
 const P = JSON.parse(fs.readFileSync(path.join(PROY, 'proyecto.json'), 'utf8'));
-const ESTILO = path.join(RAIZ, 'estilos', P.estilo);
-if (!fs.existsSync(path.join(ESTILO, 'estilo.js'))) { console.error(`✗ no existe el estilo "${P.estilo}" (carpetas en estilos/)`); process.exit(1); }
+const NOMBRE_PLANTILLA = P.plantilla || P.estilo;   // "plantilla" en proyecto.json ("estilo" se sigue aceptando)
+const ESTILO = path.join(RAIZ, 'plantillas', String(NOMBRE_PLANTILLA));
+if (!fs.existsSync(path.join(ESTILO, 'estilo.js'))) { console.error(`✗ no existe la plantilla "${NOMBRE_PLANTILLA}" (carpetas en plantillas/)`); process.exit(1); }
 const leer = (f, d) => (fs.existsSync(path.join(PROY, f)) ? JSON.parse(fs.readFileSync(path.join(PROY, f), 'utf8')) : d);
 const info = leer('datos.json', {});   // lo escribe motor/preparar.py: fps, cuadros, tamaño y duración de la fuente
 const nCuadros = fs.existsSync(path.join(PROY, 'cuadros')) ? fs.readdirSync(path.join(PROY, 'cuadros')).filter(f => f.endsWith('.jpg')).length : 0;

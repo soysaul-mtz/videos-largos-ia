@@ -6,7 +6,7 @@ subtítulos por frase y cierre con el logo que brilla.
 
 Para Claude: lee esta guía antes de editar un video largo de marca. Los colores, la tipografía, el logo y la música
 se cambian por los de la marca; el método no. Se arma con `motor/` creando un estilo propio a partir de
-`estilos/_plantilla/` (fondo de la marca, encuadre `mitad` para la pantalla dividida y las piezas del catálogo de abajo).
+`plantillas/_plantilla/` (fondo de la marca, encuadre `mitad` para la pantalla dividida y las piezas del catálogo de abajo).
 
 ## La idea
 

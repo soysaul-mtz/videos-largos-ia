@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Videos largos con IA</title>
+<link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<a class="salto" href="#contenido">Ir al contenido</a>
+
+<header class="arriba">
+  <div class="ancho arriba-dentro">
+    <a class="marca" href="#/plantillas" aria-label="Videos largos con IA, ir a Plantillas">
+      <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" width="18" height="18"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span>
+      <span>Videos largos <b>con IA</b></span>
+    </a>
+    <nav class="pestanas" aria-label="Secciones">
+      <a href="#/plantillas" data-pestana="plantillas">Plantillas</a>
+      <a href="#/nuevo" data-pestana="nuevo">Nuevo video</a>
+      <a href="#/videos" data-pestana="videos">Mis videos<span class="globo" id="globo" hidden></span></a>
+      <a href="#/crear" data-pestana="crear">Nueva plantilla</a>
+    </nav>
+  </div>
+</header>
+
+<div id="sin-conexion" class="franja error" role="alert" hidden>
+  Se perdió la conexión con la interfaz. Vuelve a abrirla con «Abrir plantillas» y recarga esta página.
+</div>
+
+<main id="contenido" class="ancho" tabindex="-1">
+
+  <!-- ───────── Plantillas ───────── -->
+  <section id="v-plantillas" hidden>
+    <h1>Plantillas</h1>
+    <p class="intro">Cada plantilla es una forma completa de editar un video largo: cómo se ve, qué va en cada parte y qué necesitas tener. Elige una (o varias) y da tu video. Lo que ves aquí son muestras hechas con este mismo sistema.</p>
+    <nav id="indice" class="indice" aria-label="Ir a una plantilla"></nav>
+    <div id="lista-plantillas"></div>
+  </section>
+
+  <!-- ───────── Nuevo video ───────── -->
+  <section id="v-nuevo" hidden>
+    <h1>Nuevo video</h1>
+    <p class="intro">Tú solo das un video. Con ese mismo video se hacen todas las plantillas que marques.</p>
+
+    <div class="tarjeta">
+      <h2 class="con-num"><span class="num chico" aria-hidden="true">1</span>Tu video</h2>
+      <div id="zona-video"></div>
+    </div>
+
+    <div class="tarjeta">
+      <div class="fila-titulo">
+        <h2 class="con-num"><span class="num chico" aria-hidden="true">2</span>¿Con qué plantillas lo quieres?</h2>
+        <button type="button" class="b2" id="marcar-todas">Marcar todas</button>
+      </div>
+      <div id="casillas" class="casillas"></div>
+    </div>
+
+    <div class="tarjeta">
+      <h2 class="con-num"><span class="num chico" aria-hidden="true">3</span><span><label for="notas">¿Algo que quieras resaltar o cuidar?</label> <small class="opcional">opcional</small></span></h2>
+      <textarea id="notas" rows="3" maxlength="4000" placeholder="Por ejemplo: que se note el precio de lanzamiento, no usar la toma donde me río, mi apellido se escribe con z…"></textarea>
+    </div>
+
+    <div id="avisos-nuevo" class="pila"></div>
+    <div class="pie-form">
+      <p id="resumen-nuevo" class="suave"></p>
+      <button type="button" class="b1 grande" id="crear-pedido">Crear pedido</button>
+    </div>
+  </section>
+
+  <!-- ───────── Mis videos ───────── -->
+  <section id="v-videos" hidden>
+    <div id="videos-lista">
+      <h1>Mis videos</h1>
+      <p class="intro">Aquí ves cómo va cada pedido y lo que te toca revisar. Se actualiza solo.</p>
+      <div id="lista-pedidos" class="pila"></div>
+    </div>
+    <div id="videos-detalle" class="pila" hidden></div>
+  </section>
+
+  <!-- ───────── Nueva plantilla ───────── -->
+  <section id="v-crear" hidden>
+    <h1>Nueva plantilla</h1>
+    <p class="intro">Enséñale a Claude el estilo que te gusta y lo convierte en una plantilla tuya, lista para usarse con cualquier video.</p>
+    <p class="franja nota">Se copia el formato (ritmo, composición, tipo de animación), nunca las imágenes, el logo, la música ni los textos del original.</p>
+
+    <div class="tarjeta">
+      <label class="campo-titulo" for="pl-nombre">¿Cómo se va a llamar tu plantilla?</label>
+      <input id="pl-nombre" type="text" maxlength="80" autocomplete="off" placeholder="Por ejemplo: Elegante oscuro">
+    </div>
+
+    <h2 class="separador">Elige una puerta <span class="suave">· puedes combinar varias</span></h2>
+
+    <details class="tarjeta puerta" id="puerta-video">
+      <summary><span class="num chico" aria-hidden="true">A</span><span class="puerta-texto"><b>Tengo un video con el estilo que quiero</b><small>Claude lo estudia cuadro por cuadro: ritmo, colores, letras y animaciones.</small></span><span class="puerta-estado" id="estado-a"></span></summary>
+      <div class="puerta-cuerpo"><div id="zona-ref-video"></div></div>
+    </details>
+
+    <details class="tarjeta puerta" id="puerta-imagenes">
+      <summary><span class="num chico" aria-hidden="true">B</span><span class="puerta-texto"><b>Tengo una o varias imágenes</b><small>De las imágenes salen los colores, las letras y el acomodo; el movimiento te lo propone Claude.</small></span><span class="puerta-estado" id="estado-b"></span></summary>
+      <div class="puerta-cuerpo"><div id="zona-ref-imagenes"></div></div>
+    </details>
+
+    <details class="tarjeta puerta" id="puerta-brief">
+      <summary><span class="num chico" aria-hidden="true">C</span><span class="puerta-texto"><b>Lo describo yo</b><small>Llenas un formulario corto y Claude diseña la plantilla con eso. Deja en blanco lo que no sepas.</small></span><span class="puerta-estado" id="estado-c"></span></summary>
+      <div class="puerta-cuerpo formulario" id="brief">
+        <div class="campo">
+          <label for="br-para">¿Para qué tipo de video es?</label>
+          <input id="br-para" type="text" maxlength="300" placeholder="Por ejemplo: videos de venta de mi curso, de 5 a 8 minutos">
+        </div>
+
+        <fieldset class="grupo">
+          <legend>Cómo se ve</legend>
+          <div class="campo">
+            <span class="etiqueta" id="et-colores">Colores <small>hasta 5; el primero es el principal</small></span>
+            <div id="br-colores" class="colores" role="group" aria-labelledby="et-colores"></div>
+          </div>
+          <div class="campo">
+            <label for="br-tipografia">Tipo de letra</label>
+            <input id="br-tipografia" type="text" maxlength="300" placeholder="Por ejemplo: gruesa y moderna, sin adornos">
+          </div>
+          <div class="campo">
+            <label for="br-fondo">Fondo</label>
+            <input id="br-fondo" type="text" maxlength="600" placeholder="Por ejemplo: oscuro con luces suaves, o blanco limpio">
+          </div>
+        </fieldset>
+
+        <fieldset class="grupo">
+          <legend>Cómo se mueve</legend>
+          <div class="campo">
+            <span class="etiqueta" id="et-ritmo">Ritmo</span>
+            <div class="opciones" role="radiogroup" aria-labelledby="et-ritmo">
+              <label><input type="radio" name="br-ritmo" value="" checked><span>Que lo proponga Claude</span></label>
+              <label><input type="radio" name="br-ritmo" value="tranquilo"><span>Tranquilo</span></label>
+              <label><input type="radio" name="br-ritmo" value="medio"><span>Medio</span></label>
+              <label><input type="radio" name="br-ritmo" value="rapido"><span>Rápido</span></label>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="br-animaciones">Tipo de animaciones</label>
+            <textarea id="br-animaciones" rows="2" maxlength="1500" placeholder="Por ejemplo: textos grandes que entran palabra por palabra, cifras que cuentan, capturas con zoom"></textarea>
+          </div>
+        </fieldset>
+
+        <fieldset class="grupo">
+          <legend>La persona y los subtítulos</legend>
+          <div class="campo">
+            <span class="etiqueta" id="et-persona">¿Cómo se ve la persona?</span>
+            <div class="opciones" role="radiogroup" aria-labelledby="et-persona">
+              <label><input type="radio" name="br-persona" value="" checked><span>Que lo proponga Claude</span></label>
+              <label><input type="radio" name="br-persona" value="completa"><span>Pantalla completa</span></label>
+              <label><input type="radio" name="br-persona" value="ventana"><span>En una ventana</span></label>
+              <label><input type="radio" name="br-persona" value="mitad"><span>Mitad de la pantalla</span></label>
+              <label><input type="radio" name="br-persona" value="combinado"><span>Combinado</span></label>
+              <label><input type="radio" name="br-persona" value="sin_persona"><span>No sale la persona</span></label>
+            </div>
+          </div>
+          <div class="campo">
+            <span class="etiqueta" id="et-subs">¿Lleva subtítulos?</span>
+            <div class="opciones" role="radiogroup" aria-labelledby="et-subs">
+              <label><input type="radio" name="br-subs" value="" checked><span>Que lo proponga Claude</span></label>
+              <label><input type="radio" name="br-subs" value="si"><span>Sí</span></label>
+              <label><input type="radio" name="br-subs" value="no"><span>No</span></label>
+            </div>
+          </div>
+          <div class="campo" id="campo-subs-como">
+            <label for="br-subs-como">¿Cómo los quieres?</label>
+            <input id="br-subs-como" type="text" maxlength="600" placeholder="Por ejemplo: pocas palabras a la vez, abajo, con la palabra clave en color">
+          </div>
+        </fieldset>
+
+        <div class="campo">
+          <label for="br-partes">Partes del video, en orden <small>una por renglón</small></label>
+          <textarea id="br-partes" rows="6" maxlength="4000" placeholder="Gancho&#10;El problema&#10;Mi historia&#10;La solución&#10;La oferta&#10;Llamado a la acción"></textarea>
+        </div>
+        <div class="campo">
+          <label for="br-no">Qué NO quiero</label>
+          <textarea id="br-no" rows="2" maxlength="1500" placeholder="Por ejemplo: nada de emojis, sin efectos de sonido fuertes, que el texto no tape mi cara"></textarea>
+        </div>
+      </div>
+    </details>
+
+    <div id="avisos-crear" class="pila"></div>
+    <div class="pie-form">
+      <p id="resumen-crear" class="suave"></p>
+      <button type="button" class="b1 grande" id="crear-plantilla">Crear pedido de plantilla</button>
+    </div>
+  </section>
+</main>
+
+<div id="avisos" class="avisos" role="status" aria-live="polite"></div>
+
+<dialog id="visor" class="visor" aria-label="Vista ampliada">
+  <div class="visor-barra"><span id="visor-titulo"></span><button type="button" class="b2" id="visor-cerrar">Cerrar</button></div>
+  <div id="visor-cuerpo" class="visor-cuerpo"></div>
+</dialog>
+
+<script src="/app.js"></script>
+</body>
+</html>

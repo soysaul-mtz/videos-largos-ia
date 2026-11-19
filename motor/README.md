@@ -11,7 +11,7 @@ cuadro o rango se puede repetir y sale idéntico, y el video se renderiza por bl
 | Parte | Dónde | Qué decide |
 |---|---|---|
 | **Motor** | `motor/` | Capas, encuadre de la persona, subtítulos, render y mezcla de audio. No se toca por video. |
-| **Estilo** | `estilos/<estilo>/` | Cómo se ve: fondo, piezas animadas, subtítulos, tipografía (`estilo.js` + `estilo.css` + `ESTILO.md`). |
+| **Estilo** | `plantillas/<estilo>/` | Cómo se ve: fondo, piezas animadas, subtítulos, tipografía (`estilo.js` + `estilo.css` + `ESTILO.md`). |
 | **Proyecto** | `proyectos/<video>/` | Qué pasa en cada segundo de ESE video (`proyecto.json` + `beats.js`). |
 
 ## Flujo de un video
@@ -19,7 +19,7 @@ cuadro o rango se puede repetir y sale idéntico, y el video se renderiza por bl
 1. **Corte.** El motor recibe el video ya cortado (sin retomas ni silencios). Se corta con `editor-vsl/` (ver su README).
 2. **Proyecto.** Crea `proyectos/<video>/proyecto.json`:
    ```json
-   { "nombre": "Mi VSL", "estilo": "neon", "fuente": "corte.mp4", "fps": 30, "foco": [0.5, 0.36],
+   { "nombre": "Mi VSL", "plantilla": "neon", "fuente": "corte.mp4", "fps": 30, "foco": [0.5, 0.36],
      "musica": "musica/cancion.mp3", "volumen_musica_db": -19 }
    ```
    `foco` es dónde está la cara en el cuadro (0–1 de ancho y de alto): las ventanas y los zooms se centran ahí.
@@ -68,9 +68,9 @@ Campos de un beat:
 
 Las imágenes y capturas del proyecto van en `proyectos/<video>/img/` y se piden como `/proyecto/img/archivo.png`.
 
-## Un estilo (`estilos/<estilo>/estilo.js`)
+## Un estilo (`plantillas/<estilo>/estilo.js`)
 
-`estilos/_plantilla/` es el ejemplo mínimo comentado. Un estilo exporta:
+`plantillas/_plantilla/` es el ejemplo mínimo comentado. Un estilo exporta:
 
 - `video`: encuadres con nombre (`completo`, `ventana`, `mitad`…) y `porDefecto`. `tr`: segundos del viaje entre encuadres.
 - `fondo`: `crea(el, M)` y `pinta(el, t, M)`. Lo que se ve detrás cuando la persona no llena la pantalla.

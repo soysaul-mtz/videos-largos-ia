@@ -1,0 +1,55 @@
+{
+  "numero": 1,
+  "id": "neon",
+  "nombre": "Neón",
+  "titulo": "Plantilla larga 1 · Neón",
+  "resumen": "Video de venta horizontal con gráficos y cifras animadas sobre fondo oscuro de luces naranja y azul, capturas de prueba y recorrido de la plataforma con la persona en una ventanita.",
+  "sirve_para": [
+    "Video de venta de una comunidad, curso o membresía",
+    "Recorrido de un producto digital por dentro, de 2 a 4 minutos",
+    "Presentar resultados con cifras y capturas reales",
+    "Lanzamiento con precio de hoy y precio de después"
+  ],
+  "no_sirve_para": [
+    "Video a cámara sin plataforma ni capturas que enseñar: usa la plantilla Cinético",
+    "Compilado de testimonios de clientes: usa la plantilla Testimonios",
+    "Clases o cursos de 30 minutos o más: usa editor-cursos"
+  ],
+  "duracion_ideal": "de 3 a 10 minutos",
+  "tiempo_de_edicion": "2 a 3 horas por cada 3 minutos de video, con el material completo (estimado)",
+  "material": [
+    "1 video a cámara, horizontal, grabado con el guion-molde",
+    "1 grabación de pantalla de la plataforma, de 1.5 a 2 minutos, en tema oscuro",
+    "6 a 10 capturas reales de resultados, con la cifra que se marca en cada una",
+    "1 logo redondo con fondo transparente",
+    "3 a 5 portadas verticales y 8 miniaturas horizontales de su trabajo",
+    "Cifras reales: 2 pilares con sus datos, 2 metas, años de trayectoria, cifra mensual y cifra más grande",
+    "3 tomas de apoyo distintas del negocio (video o foto)",
+    "6 o más portadas de lo que incluye, con título y una línea",
+    "La oferta: precio de hoy, precio de después, enlace, texto del botón y garantía",
+    "1 canción con licencia"
+  ],
+  "secciones": [
+    { "nombre": "Gancho", "porcentaje": 5, "que_pasa": "La pregunta del espectador en una barra de búsqueda, su dolor en una cifra y el logo del producto." },
+    { "nombre": "Promesa", "porcentaje": 5, "que_pasa": "Dos tarjetas con los pilares del producto y una gráfica con las metas de dinero." },
+    { "nombre": "Autoridad y prueba", "porcentaje": 6, "que_pasa": "Años de trayectoria, capturas reales con la cifra marcada en verde y un contador gigante." },
+    { "nombre": "Puente", "porcentaje": 4, "que_pasa": "La pantalla del producto inclinada en 3D y la persona anuncia que lo va a enseñar por dentro." },
+    { "nombre": "Recorrido", "porcentaje": 48, "que_pasa": "La grabación de pantalla ocupa el cuadro y la persona queda en una ventanita arriba a la derecha." },
+    { "nombre": "Niveles", "porcentaje": 4, "que_pasa": "Escalones que muestran las etapas, con una bolita que salta de una a otra." },
+    { "nombre": "Respaldo", "porcentaje": 9, "que_pasa": "Tres tomas del negocio real con rótulo, una cifra con su medio y la rejilla de todo lo que incluye." },
+    { "nombre": "Oferta", "porcentaje": 7, "que_pasa": "La persona dice el precio y una tarjeta de inscripción muestra cómo sube después." },
+    { "nombre": "Llamado a la acción", "porcentaje": 12, "que_pasa": "La persona a cámara con un botón que recibe el clic, la garantía y la despedida." }
+  ],
+  "piezas_destacadas": [
+    { "pieza": "buscador", "que_es": "Barra de búsqueda que nace de una línea y escribe la pregunta del espectador." },
+    { "pieza": "tarjeta", "que_es": "Tarjeta inclinada con hasta 4 datos, o con una cifra que cuenta hacia arriba." },
+    { "pieza": "grafica", "que_es": "Línea que sube con un punto brillante y etiquetas de las metas de dinero." },
+    { "pieza": "capturas", "que_es": "Capturas reales que entran con zoom y llevan la cifra marcada en verde." },
+    { "pieza": "contador", "que_es": "Cifra verde gigante que cuenta encima de las capturas; una sola por video." },
+    { "pieza": "pantalla3d", "que_es": "La pantalla del producto como plano inclinado en 3D, con el título resaltado." },
+    { "pieza": "pantalla", "que_es": "Grabación de pantalla a cuadro completo sobre el fondo neón, con la persona en ventanita." },
+    { "pieza": "precio", "que_es": "Tarjeta de inscripción con borde de neón y un precio que sube en el botón." }
+  ],
+  "como_pedirla": "Edita este video con la plantilla Neón: /ruta/a/mi-video.mp4",
+  "muestra": { "proyecto": "proyectos/demo-neon", "tiempos": [7.0, 8.7, 12.6, 19.5, 21.6, 34.0], "tramo": [13.8, 25.4] }
+}

@@ -1,0 +1,49 @@
+{
+  "numero": 3,
+  "id": "testimonios",
+  "nombre": "Testimonios",
+  "titulo": "Plantilla larga 3 · Testimonios",
+  "resumen": "Compilado horizontal de testimonios a corte seco: las fuentes se ven tal como vienen, con tomas de evento encima de las voces y subtítulo amarillo solo en la frase clave.",
+  "sirve_para": [
+    "Compilado de resultados de alumnos o clientes",
+    "Video de prueba social para una página de venta",
+    "Resumen de un evento contado por sus asistentes",
+    "Juntar testimonios de fuentes muy distintas (videollamadas, celulares, notas de voz)"
+  ],
+  "no_sirve_para": [
+    "Un solo testimonio largo o una entrevista: usa editor-vsl",
+    "Video de venta con una persona a cámara: usa la plantilla Neón o Cinético",
+    "Casos sin tomas de evento ni otra imagen para cubrir las voces"
+  ],
+  "duracion_ideal": "de 3 a 6 minutos",
+  "tiempo_de_edicion": "2 a 3 horas por cada 3 minutos de video, con los testimonios ya transcritos (estimado)",
+  "material": [
+    "Testimonios completos de 8 a 10 personas, de 1 a 3 minutos cada uno, en video o audio",
+    "5 minutos o más de videos de eventos reales, de 4 o más momentos distintos, con su sonido",
+    "1 grabación de pantalla compartida con la cifra de ingresos a la vista (10 a 15 s útiles)",
+    "1 grabación de pantalla del producto, de 30 s o más",
+    "2 a 4 capturas de resultados (opcionales)",
+    "1 logo con fondo transparente y, si hay, su cortinilla de sonido",
+    "1 canción con licencia",
+    "Nombre de cada persona y su permiso para usar el testimonio"
+  ],
+  "secciones": [
+    { "nombre": "Gancho", "porcentaje": 9, "que_pasa": "3 o 4 frases estrella, una por persona, cada una con su subtítulo amarillo y sin tomas de apoyo." },
+    { "nombre": "Puente", "porcentaje": 2, "que_pasa": "3 tomas de evento con su propio sonido, sin voz." },
+    { "nombre": "Testimonios", "porcentaje": 70, "que_pasa": "Cadena de testimonios: la voz entra sobre tomas de evento, la persona da la cara y vuelven las tomas." },
+    { "nombre": "Prueba", "porcentaje": 8, "que_pasa": "Ráfaga de pantallas del producto y la pantalla compartida con la cifra de ingresos." },
+    { "nombre": "Remate", "porcentaje": 8, "que_pasa": "Racha de tomas de evento con la música arriba y una última frase corta." },
+    { "nombre": "Cierre", "porcentaje": 3, "que_pasa": "Corte seco al logo, fijo 6 segundos." }
+  ],
+  "piezas_destacadas": [
+    { "pieza": "testimonio", "que_es": "Bloque con la voz completa de una persona; la imagen es ella o las tomas de apoyo que la tapan." },
+    { "pieza": "testimonio › subs", "que_es": "Subtítulo amarillo de un renglón, solo en el remate de la frase; la cifra va sola en su tarjeta." },
+    { "pieza": "testimonio › apoyo", "que_es": "Tomas de evento de 1.0 a 1.7 s, en rachas, encima de la voz y sin cortarla." },
+    { "pieza": "testimonio (formato vertical)", "que_es": "Video de celular completo, centrado sobre negro puro." },
+    { "pieza": "testimonio (formato llamada)", "que_es": "Videollamada a pantalla completa con toda su interfaz, sin recortar." },
+    { "pieza": "apoyo", "que_es": "Bloque puente: tomas de evento seguidas con su propio sonido, sin voz." },
+    { "pieza": "imagen", "que_es": "Imagen fija: el logo de cierre o una captura de ingresos, con acercamiento lento." }
+  ],
+  "como_pedirla": "Arma un compilado con la plantilla Testimonios usando los videos de esta carpeta: /ruta/a/mis-testimonios",
+  "muestra": { "proyecto": "plantillas/testimonios/demo", "tiempos": [4.6, 8.0, 9.8, 12.2, 17.3, 21.5], "tramo": [2.5, 14.0] }
+}

@@ -1,0 +1,35 @@
+Íconos de línea del estilo «cinético».
+Origen: Tabler Icons (https://github.com/tabler/tabler-icons), licencia MIT (ver LICENCIA-tabler.txt). Se bajaron de icons/outline/ y solo se les cambió el nombre:
+
+caja.svg  ←  package.svg
+personas.svg  ←  users-group.svg
+persona.svg  ←  user.svg
+mensajes.svg  ←  messages.svg
+laptop.svg  ←  device-laptop.svg
+billete.svg  ←  cash.svg
+moneda.svg  ←  coin.svg
+diana.svg  ←  target-arrow.svg
+cohete.svg  ←  rocket.svg
+calendario.svg  ←  calendar-check.svg
+foco.svg  ←  bulb.svg
+reloj.svg  ←  clock.svg
+telefono.svg  ←  phone.svg
+megafono.svg  ←  speakerphone.svg
+tienda.svg  ←  building-store.svg
+grafica.svg  ←  trending-up.svg
+trato.svg  ←  heart-handshake.svg
+candado.svg  ←  lock.svg
+lupa.svg  ←  search.svg
+carrito.svg  ←  shopping-cart.svg
+mundo.svg  ←  world.svg
+premio.svg  ←  award.svg
+correo.svg  ←  mail.svg
+engrane.svg  ←  settings.svg
+mano.svg  ←  hand-click.svg
+regalo.svg  ←  gift.svg
+palomita.svg  ←  circle-check.svg
+tache.svg  ←  circle-x.svg
+rayo.svg  ←  bolt.svg
+celular.svg  ←  device-mobile.svg
+
+Para agregar otro: guarda el .svg aquí (de línea, viewBox 24×24) y corre  node plantillas/cinetico/iconos/armar.mjs

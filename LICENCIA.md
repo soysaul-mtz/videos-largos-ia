@@ -20,7 +20,7 @@ Este paquete (código, plantillas, fichas de estilo, instrucciones para Claude, 
 ## Componentes de terceros
 - Las tipografías incluidas (Alfa Slab One, Anton, Arimo, Barlow Semi Condensed, Bebas Neue, DM Serif Display,
   Instrument Serif, Inter Tight, League Gothic, Montserrat, Oswald, Playfair Display, Poppins, Roboto Condensed) son de
-  Google Fonts con la **SIL Open Font License** (ver `fonts/`). Los íconos de `estilos/cinetico/iconos/` son de Tabler
+  Google Fonts con la **SIL Open Font License** (ver `fonts/`). Los íconos de `plantillas/cinetico/iconos/` son de Tabler
   Icons y Three.js es de sus autores, ambos con licencia MIT. Los paquetes de Node y de Python que instala
   `instalar.sh` conservan sus propias licencias.
 - **Los videos de referencia de los estilos no forman parte del paquete**: son de sus autores y se comparten solo como
